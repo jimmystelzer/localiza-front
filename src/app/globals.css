@@ -1,0 +1,49 @@
+:root {
+  --background: #f8fcf8;
+  --foreground: #303030;
+  --primary: #01602a;
+  --font-weight-stronger: 700;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-stronger);
+  line-height: 3rem;
+  color: var(--primary);
+  padding: 1.5rem;
+}
+
+.headline_container {
+  display: flex;
+  justify-content: center;
+} 
+
+.svgcolor {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(200deg)
+}
