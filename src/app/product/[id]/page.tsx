@@ -6,10 +6,7 @@ import Product from '../../components/Products/Product';
 import { useProduct } from '../../hooks/useProduct';
 import { CircularProgress, Grid, Typography } from '@mui/material';
 
-interface ProductPageProps {
-}
-
-const ProductPage: React.FC<ProductPageProps> = () => {
+const ProductPage: React.FC<unknown> = () => {
   const params = useParams<{ id: string }>();
   const id = params.id;
   const productId = parseInt(id, 10);

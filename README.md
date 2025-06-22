@@ -66,5 +66,5 @@ Para executar o projeto localmente, siga estes passos:
 ## Links
 
 *   **Link do Repositório:** [https://github.com/jimmystelzer/localiza-front](https://github.com/jimmystelzer/localiza-front)
-*   **Link do App na Vercel:** [Vercel](https://vercel.com)
+*   **Link do App na Vercel:** [https://localiza-front-git-main-jimmy-stelzers-projects.vercel.app/](https://localiza-front-git-main-jimmy-stelzers-projects.vercel.app/)
 

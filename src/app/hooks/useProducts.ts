@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getProducts, Product } from '../services/productService';
+import { getProducts } from '../services/productService';
 
 interface UseProductsOptions {
   limit?: number;
