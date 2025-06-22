@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import Image from 'next/image'
 import { Product } from '../../services/productService';
 import {
   Box,
   CircularProgress,
+  Grid,
   Pagination,
+  Typography,
 } from '@mui/material';
 import ProductCard from './ProductCard';
 import { useProducts } from '@/app/hooks/useProducts';
@@ -22,11 +25,31 @@ const ProductList: React.FC<ProductListProps> = () => {
   };
 
   if (isLoading) {
-    return <CircularProgress />;
+    return (
+      <center>
+        <Grid padding={3} margin={3}>
+          <CircularProgress />
+        </Grid>
+      </center>
+    );
   }
 
   if (error) {
-    return <div>Erro ao carregar os produtos.</div>;
+    return (
+      <Grid container padding={4} margin={8} alignItems={'center'} justifyContent={'center'}>
+        <Grid>
+          <Image src={'/img/error.svg'} alt={'Erro'} width="128" height="128" className="svgcolor" />
+        </Grid>
+        <Grid>
+          <Typography variant="h2">
+            Erro
+          </Typography>
+          <Typography variant="h5" color="text.secondary" >
+            {JSON.stringify(error)}
+          </Typography>
+        </Grid>
+      </Grid>
+    );
   }
 
   return (
@@ -44,10 +67,10 @@ const ProductList: React.FC<ProductListProps> = () => {
           <ProductCard key={`ProductId-${product.id}`} product={product} />
         ))}
       </Box>
-      {totalCount && ( // Exibe o paginador se totalCount existir
+      {totalCount && ( 
         <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
           <Pagination
-            count={Math.ceil(totalCount / limit)} // Calcula o número de páginas
+            count={Math.ceil(totalCount / limit)}
             page={page}
             onChange={handleChange}
           />
