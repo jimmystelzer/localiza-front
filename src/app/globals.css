@@ -45,5 +45,5 @@ a {
 } 
 
 .svgcolor {
-  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(200deg)
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(200deg)
 }

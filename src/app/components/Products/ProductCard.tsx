@@ -31,28 +31,38 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </Link>
             <CardContent sx={{ height: '100%' }}>
                 <Link href={`/product/${product.id}`}>
-                    <Typography variant="h5" component="div" color="text.primary" sx={{
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "display",
-                        WebkitLineClamp: "2",
-                        WebkitBoxOrient: "vertical",
-                        fontSize: ".875rem",
-                        color: "var(--primary)",
-                        textTransform: "uppercase",
-                        fontWeight: "var(--font-weight-stronger)"
-                    }}>
+                    <Typography
+                        variant="h5"
+                        gutterBottom
+                        component="div"
+                        align='justify'
+                        color="var(--primary)"
+                        textTransform={'uppercase'}
+                        fontWeight={'var(--font-weight-stronger)'}
+                        fontSize={'.875rem'}
+                        overflow={'hidden'}
+                        textOverflow={'ellipsis'}
+                        display={'-webkit-box'}
+                        sx={{
+                            WebkitLineClamp: "2",
+                            WebkitBoxOrient: "vertical",
+                        }}
+                    >
                         {product.title}
                     </Typography>
 
 
-                    <Typography variant="body2" color="text.secondary" sx={{
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "display",
-                        WebkitLineClamp: "3",
-                        WebkitBoxOrient: "vertical",
-                    }}>
+                    <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        align='justify'
+                        overflow={'hidden'}
+                        textOverflow={'ellipsis'}
+                        display={'-webkit-box'}
+                        sx={{
+                            WebkitLineClamp: "3",
+                            WebkitBoxOrient: "vertical",
+                        }}>
                         {product.description}
                     </Typography>
                     <Stack direction="row" justifyContent={'space-between'} spacing={1} padding={1}>

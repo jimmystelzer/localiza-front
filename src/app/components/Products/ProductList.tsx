@@ -38,7 +38,7 @@ const ProductList: React.FC<ProductListProps> = () => {
     return (
       <Grid container padding={4} margin={8} alignItems={'center'} justifyContent={'center'}>
         <Grid>
-          <Image src={'/img/error.svg'} alt={'Erro'} width="128" height="128" className="svgcolor" />
+          <Image src={'/img/error.svg'} alt={'Erro'} width="128" height="128" />
         </Grid>
         <Grid>
           <Typography variant="h2">
